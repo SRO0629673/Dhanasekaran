@@ -1,0 +1,170 @@
+import os
+
+# Specify the folder path
+folder_path = r"D:\V Dhanasekaran & Associates\Website\AuditOfficeWebsite"
+
+# Ensure the folder exists
+os.makedirs(folder_path, exist_ok=True)
+
+# HTML content
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Dhanasekaran and Associates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>V Dhanasekaran and Associates</h1>
+            <p>Your Trusted Partner in Audit, Tax, and Compliance</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            At V Dhanasekaran and Associates, we are committed to delivering excellence in financial advisory, audit, and compliance services. 
+            With a focus on integrity, professionalism, and client-centric solutions, we help businesses navigate complexities and achieve 
+            sustainable growth. Our team of experienced Chartered Accountants offers a blend of expertise and innovation, ensuring that 
+            every client receives personalized attention and strategies tailored to their needs. 
+        </p>
+        <p>
+            Whether you're a startup, SME, or large enterprise, we are your reliable partners for robust financial planning, compliance, 
+            and advisory services.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Statutory Audit & Assurance</li>
+            <li>Internal Audits & Risk Management</li>
+            <li>GST Compliance and Filing</li>
+            <li>Income Tax Return Filing</li>
+            <li>Tax Planning & Advisory</li>
+            <li>Corporate Law Advisory & ROC Filings</li>
+            <li>Management Consultancy & Business Advisory</li>
+            <li>Project Report Preparation & Financial Projections</li>
+            <li>Accounting and Bookkeeping Services</li>
+            <li>Start-up Advisory & Registrations</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> (Add your office address here)</p>
+        <p><strong>Phone:</strong> +91-6369425688</p>
+        <p><strong>Email:</strong> <a href="mailto:vds.associates24@gmail.com">vds.associates24@gmail.com</a></p>
+        <p><strong>Follow Us:</strong> (Optional: Add social media links like LinkedIn or Facebook)</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 V Dhanasekaran and Associates. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+"""
+
+# CSS content
+css_content = """body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+"""
+
+# Save HTML file
+html_file_path = os.path.join(folder_path, "index.html")
+with open(html_file_path, "w", encoding="utf-8") as html_file:
+    html_file.write(html_content)
+
+# Save CSS file
+css_file_path = os.path.join(folder_path, "style.css")
+with open(css_file_path, "w", encoding="utf-8") as css_file:
+    css_file.write(css_content)
+
+print(f"Files saved successfully in: {folder_path}")
+
